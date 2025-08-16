@@ -1,1 +1,1 @@
-# Mora Foundation Evauation of Arge anguge Modes
+# Moral Foundation Evaluation of Large Language Models
