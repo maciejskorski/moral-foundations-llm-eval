@@ -23,7 +23,7 @@ AI vs Human Errors
 
 ![AI vs Human Errors](docs/results/ai-humans.svg)
 
-## 🏗️ Project Structure
+## 🗂️ Project Structure
 
 ### [`datasets.ipynb`](src/datasets.ipynb)
 **📊 Dataset Standardization** 
