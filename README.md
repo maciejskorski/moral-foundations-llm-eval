@@ -11,7 +11,7 @@
 
 ## 📋 Overview
 
-Large-scale comprehensive evaluation of LLMs on moral foundation classification using Haidt's Moral Foundations Theory and statistical modeling. This project compares AI performance against human annotators across five moral dimensions: care/harm, fairness/cheating, loyalty/betrayal, authority/subversion, and sanctity/degradation. 
+Large-scale comprehensive evaluation of LLMs on moral foundation classification using Haidt's Moral Foundations Theory and Bayesian statistical modeling. This project systematically compares AI performance against human annotators across moral dimensions.
 
 **🎯 Key findings:** AI models show more balanced predictions and much fewer false negatives (missed findings) compared to human annotators, achieving 75th-100th percentile performance across moral foundations.
 
