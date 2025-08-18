@@ -73,15 +73,32 @@
 
     <div class="chart">
         <h3>📊 AI vs Human Performance</h3>
-        <img src="results/ai-rank.svg" alt="AI vs Human Performance Rankings">
-        <p><em>Performance rankings across moral dimensions</em></p>
+        <div id="chart1" style="width: 100%;"></div>
+        <p><em>Interactive performance rankings across moral dimensions</em></p>
     </div>
 
     <div class="chart">
         <h3>⚖️ AI vs Human Errors</h3>
-        <img src="results/ai-humans.svg" alt="AI vs Human Error Analysis">
-        <p><em>False positive and false negative rates comparison</em></p>
+        <div id="chart2" style="width: 100%;"></div>
+        <p><em>Interactive false positive and false negative rates comparison</em></p>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    
+    <script>
+        // Load interactive charts
+        vegaEmbed('#chart1', 'results/ai-rank.json').catch(() => {
+            // Fallback to SVG if JSON not available
+            document.getElementById('chart1').innerHTML = '<img src="results/ai-rank.svg" alt="AI vs Human Performance Rankings" style="max-width: 100%;">';
+        });
+        
+        vegaEmbed('#chart2', 'results/ai-humans.json').catch(() => {
+            // Fallback to SVG if JSON not available
+            document.getElementById('chart2').innerHTML = '<img src="results/ai-humans.svg" alt="AI vs Human Error Analysis" style="max-width: 100%;">';
+        });
+    </script>
 
     <h2>🧪 Methodology</h2>
     
