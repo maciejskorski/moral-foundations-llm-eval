@@ -53,7 +53,7 @@
     <h1>🧠 Estimating Human vs AI Moral Competences</h1>
     
     <div class="badges">
-        <img src="https://img.shields.io/badge/Python-3.8+-blue.svg" class="badge">
+        <img src="https://img.shields.io/badge/Python-3.12+-blue.svg" class="badge">
         <img src="https://img.shields.io/badge/Jupyter-Notebook-orange.svg" class="badge">
         <img src="https://img.shields.io/badge/Papermill-Parameterized-green.svg" class="badge">
         <img src="https://img.shields.io/badge/TensorFlow-2.0+-orange.svg" class="badge">
@@ -82,26 +82,22 @@
         <p><em>False positive and false negative rates comparison</em></p>
     </div>
 
-    <h2>🏗️ Project Structure</h2>
+    <h2>🔬 Methodology</h2>
     
     <div class="notebook">
-        <h4>📊 datasets.ipynb</h4>
-        <p>Dataset standardization for MFRC (Reddit), MFTC (Twitter), and eMFD datasets. Handles deduplication, multi-annotator formats, and uploads clean datasets to 🤗 HuggingFace Hub.</p>
+        <h4>Step 1: 📊 Dataset Standardization</h4>
+        <p>Standardize three moral psychology datasets (MFRC, MFTC, eMFD) into unified 5-foundation taxonomy. Clean annotations from multiple human annotators across Reddit, Twitter, and forum text domains.</p>
     </div>
 
     <div class="notebook">
-        <h4>🤖 ask_llm.ipynb</h4>
-        <p>LLM evaluation pipeline for Claude-4, DeepSeek-V3, Llama4-Maverick with async processing, standardized prompting, and W&B logging.</p>
+        <h4>Step 2: 🤖 LLM Evaluation</h4>
+        <p>Evaluate multiple state-of-the-art language models (Claude-4, DeepSeek-V3, Llama4-Maverick) on moral foundation classification using standardized prompting and async batch processing.</p>
     </div>
 
     <div class="notebook">
-        <h4>📈 annots_competences.ipynb</h4>
-        <p>Human vs AI performance analysis using a novel GPU-efficient Dawid-Skene competence model in TensorFlow to estimate annotator quality and generate percentile rankings.</p>
+        <h4>Step 3: 📈 Competence Modeling</h4>
+        <p>Apply novel GPU-efficient Dawid-Skene statistical model to estimate annotator competences, compare AI vs human performance, and generate percentile rankings across moral dimensions.</p>
     </div>
-
-    <h2>🚀 Quick Start</h2>
-    <p>Run with custom parameters using Papermill:</p>
-    <pre><code>papermill ask_llm.ipynb output.ipynb -p model_name "claude-4-sonnet" -p test_data 'morality-MFRC' -p sample 100</code></pre>
 
     <h2>⚙️ Dependencies</h2>
     <p><code>datasets</code> <code>tensorflow</code> <code>anthropic</code> <code>openai</code> <code>replicate</code> <code>wandb</code> <code>papermill</code></p>
