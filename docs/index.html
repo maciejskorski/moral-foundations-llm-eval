@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimating Human vs AI Moral Competences</title>
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            max-width: 900px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            line-height: 1.6; 
+            color: #333;
+        }
+        .badges { margin: 15px 0; }
+        .badge { margin: 2px; }
+        .chart { text-align: center; margin: 30px 0; }
+        .chart img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        code { background: #f8f9fa; padding: 4px 8px; border-radius: 4px; font-family: 'Monaco', 'Courier New', monospace; }
+        pre { background: #f8f9fa; padding: 15px; border-radius: 8px; overflow-x: auto; }
+        .notebook { 
+            background: #f8f9fa; 
+            padding: 15px; 
+            margin: 10px 0; 
+            border-radius: 8px; 
+            border-left: 4px solid #007acc;
+        }
+        .notebook h4 { margin: 0 0 8px 0; color: #007acc; }
+        .finding { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        .github-link {
+            display: inline-block;
+            background: #24292e;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .github-link:hover { background: #0366d6; }
+        h1 { color: #2c3e50; }
+        h2 { color: #34495e; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <h1>🧠 Estimating Human vs AI Moral Competences</h1>
+    
+    <div class="badges">
+        <img src="https://img.shields.io/badge/Python-3.8+-blue.svg" class="badge">
+        <img src="https://img.shields.io/badge/Jupyter-Notebook-orange.svg" class="badge">
+        <img src="https://img.shields.io/badge/Papermill-Parameterized-green.svg" class="badge">
+        <img src="https://img.shields.io/badge/TensorFlow-2.0+-orange.svg" class="badge">
+        <img src="https://img.shields.io/badge/🤗-Datasets-yellow.svg" class="badge">
+        <img src="https://img.shields.io/badge/Weights_&_Biases-FFBE00?logo=WeightsAndBiases&logoColor=white" class="badge">
+    </div>
+
+    <p><strong>Large-scale comprehensive evaluation of LLMs on moral foundation classification using Haidt's Moral Foundations Theory and statistical modeling.</strong></p>
+
+    <p>This project compares AI performance against human annotators across five moral dimensions: care/harm, fairness/cheating, loyalty/betrayal, authority/subversion, and sanctity/degradation.</p>
+
+    <div class="finding">
+        <h3>🎯 Key Findings</h3>
+        <p>AI models show more balanced predictions and much fewer false negatives (missed findings) compared to human annotators, achieving <strong>75th-100th percentile performance</strong> across moral foundations.</p>
+    </div>
+
+    <div class="chart">
+        <h3>📊 AI vs Human Performance</h3>
+        <img src="results/ai-rank.svg" alt="AI vs Human Performance Rankings">
+        <p><em>Performance rankings across moral dimensions</em></p>
+    </div>
+
+    <div class="chart">
+        <h3>⚖️ AI vs Human Errors</h3>
+        <img src="results/ai-humans.svg" alt="AI vs Human Error Analysis">
+        <p><em>False positive and false negative rates comparison</em></p>
+    </div>
+
+    <h2>🏗️ Project Structure</h2>
+    
+    <div class="notebook">
+        <h4>📊 datasets.ipynb</h4>
+        <p>Dataset standardization for MFRC (Reddit), MFTC (Twitter), and eMFD datasets. Handles deduplication, multi-annotator formats, and uploads clean datasets to 🤗 HuggingFace Hub.</p>
+    </div>
+
+    <div class="notebook">
+        <h4>🤖 ask_llm.ipynb</h4>
+        <p>LLM evaluation pipeline for Claude-4, DeepSeek-V3, Llama4-Maverick with async processing, standardized prompting, and W&B logging.</p>
+    </div>
+
+    <div class="notebook">
+        <h4>📈 annots_competences.ipynb</h4>
+        <p>Human vs AI performance analysis using a novel GPU-efficient Dawid-Skene competence model in TensorFlow to estimate annotator quality and generate percentile rankings.</p>
+    </div>
+
+    <h2>🚀 Quick Start</h2>
+    <p>Run with custom parameters using Papermill:</p>
+    <pre><code>papermill ask_llm.ipynb output.ipynb -p model_name "claude-4-sonnet" -p test_data 'morality-MFRC' -p sample 100</code></pre>
+
+    <h2>⚙️ Dependencies</h2>
+    <p><code>datasets</code> <code>tensorflow</code> <code>anthropic</code> <code>openai</code> <code>replicate</code> <code>wandb</code> <code>papermill</code></p>
+
+    <p>
+        <a href="https://github.com/maciejskorski/moral-foundations-llm-eval" class="github-link">
+            📂 View Repository on GitHub
+        </a>
+    </p>
+
+    <footer style="margin-top: 50px; padding-top: 20px; border-top: 1px solid #eee; text-align: center; color: #666;">
+        <p>Research on moral foundation classification and annotator competence modeling</p>
+    </footer>
+</body>
+</html>

@@ -6,6 +6,7 @@
 [![HuggingFace](https://img.shields.io/badge/🤗-Datasets-yellow.svg)](https://huggingface.co/datasets/maciejskorski)
 [![WandB](https://img.shields.io/badge/Weights_&_Biases-FFBE00?logo=WeightsAndBiases&logoColor=white)](https://wandb.ai)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Website](https://img.shields.io/badge/Website-GitHub%20Pages-brightgreen.svg)](https://maciejskorski.github.io/moral-foundations-llm-eval/)
 [![arXiv](https://img.shields.io/badge/arXiv-2XXX.XXXXX-b31b1b.svg)](https://arxiv.org)
 
 ## 📋 Overview
@@ -16,11 +17,11 @@ Large-scale comprehensive evaluation of LLMs on moral foundation classification 
 
 AI vs Human Performance
 
-![AI vs Human Performance](results/ai-rank.svg)
+![AI vs Human Performance](docs/results/ai-rank.svg)
 
 AI vs Human Errors
 
-![AI vs Human Errors](results/ai-humans.svg)
+![AI vs Human Errors](docs/results/ai-humans.svg)
 
 ## 🏗️ Project Structure
 
@@ -50,7 +51,7 @@ Implements a novel GPU-efficient Dawid-Skene competence model in TensorFlow to:
 - Estimate annotator competence and consensus
 - Compare AI performance against human baselines
 - Generate percentile rankings and balanced accuracy metrics
-- Visualize performance distributions across moral dimensions
+- Visualize performance distributions across moral dimensions and datasets
 
 
 
