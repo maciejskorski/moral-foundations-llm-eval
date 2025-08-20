@@ -7,7 +7,7 @@
 [![WandB](https://img.shields.io/badge/Weights_&_Biases-FFBE00?logo=WeightsAndBiases&logoColor=white)](https://wandb.ai)
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 [![Website](https://img.shields.io/badge/Website-GitHub%20Pages-brightgreen.svg)](https://maciejskorski.github.io/moral-foundations-llm-eval/)
-[![arXiv](https://img.shields.io/badge/arXiv-2XXX.XXXXX-b31b1b.svg)](https://arxiv.org)
+[![arXiv](https://img.shields.io/badge/arXiv-2508.13804-b31b1b.svg)](https://arxiv.org/abs/2508.13804)
 
 ## 📋 Overview
 

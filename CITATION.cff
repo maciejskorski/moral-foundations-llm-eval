@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: "Skorski"
+    given-names: "Maciej"
+title: "Estimating Human vs AI Moral Competences"
+version: 1.0.0
+date-released: 2024-08-25
+url: "https://github.com/maciejskorski/moral-foundations-llm-eval"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Skorski"
+      given-names: "Maciej"
+  doi: "10.48550/arXiv.2508.13804"
+  journal: "arXiv preprint"
+  title: "Beyond Human Judgment: A Bayesian Evaluation of LLMs' Moral Values Understanding"
+  year: 2024
+  url: "https://arxiv.org/abs/2508.13804"
