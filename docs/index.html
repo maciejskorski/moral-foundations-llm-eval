@@ -35,16 +35,42 @@
             margin: 25px 0;
             text-align: center;
         }
-        .github-link {
-            display: inline-block;
-            background: #24292e;
-            color: white;
+        .links-container {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 25px 0;
+        }
+        .link-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             padding: 12px 20px;
             text-decoration: none;
-            border-radius: 6px;
-            margin: 20px 0;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        .github-link:hover { background: #0366d6; }
+        .github-link {
+            background: #24292e;
+            color: white;
+        }
+        .github-link:hover { 
+            background: #0366d6; 
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .arxiv-link {
+            background: #b31b1b;
+            color: white;
+        }
+        .arxiv-link:hover { 
+            background: #d42c2c; 
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
         h1 { color: #2c3e50; }
         h2 { color: #34495e; border-bottom: 2px solid #eee; padding-bottom: 10px; }
     </style>
@@ -120,11 +146,16 @@
     <h2>⚙️ Dependencies</h2>
     <p><code>datasets</code> <code>tensorflow</code> <code>anthropic</code> <code>openai</code> <code>replicate</code> <code>wandb</code> <code>papermill</code></p>
 
-    <p>
-        <a href="https://github.com/maciejskorski/moral-foundations-llm-eval" class="github-link">
-            📂 View Repository on GitHub
+    <div class="links-container">
+        <a href="https://github.com/maciejskorski/moral-foundations-llm-eval" class="link-button github-link">
+            <span>📂</span>
+            <span>View Repository on GitHub</span>
         </a>
-    </p>
+        <a href="https://arxiv.org/abs/2508.13804" class="link-button arxiv-link">
+            <span>📄</span>
+            <span>View arXiv Paper</span>
+        </a>
+    </div>
 
     <footer style="margin-top: 50px; padding-top: 20px; border-top: 1px solid #eee; text-align: center; color: #666;">
         <p>Research on moral foundation classification and annotator competence modeling</p>
